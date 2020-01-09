@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_ls.h"
-#include <sys/acl.h>
+//#include <sys/acl.h>
 
 char	get_filetype(t_file *file)
 {
@@ -57,6 +57,7 @@ char	get_ninth_acright(t_file *file)
 	return ('-');
 }
 
+/*
 char	get_acl(t_file *file)
 {
 	acl_t	acl;
@@ -72,3 +73,4 @@ char	get_acl(t_file *file)
 	}
 	return (' ');
 }
+*/

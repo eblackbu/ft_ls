@@ -39,11 +39,11 @@ char	*get_timestamp(t_file *file, t_flag flag)
 
 	ret = ft_strnew(14);
 	if (flag & FLAG_UBIG)
-		spec = file->s_stat->st_birthtimespec;
+		spec = file->s_stat->st_ctim;
 	else if (flag & FLAG_U)
-		spec = file->s_stat->st_atimespec;
+		spec = file->s_stat->st_atim;
 	else
-		spec = file->s_stat->st_mtimespec;
+		spec = file->s_stat->st_mtim;
 	timestamp = ctime(&spec.tv_sec);
 	if (spec.tv_sec < time(NULL) - 15768000 || spec.tv_sec > time(NULL))
 	{
